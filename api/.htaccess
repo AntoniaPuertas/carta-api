@@ -1,0 +1,6 @@
+# Desactiva MultiViews: si no, Apache convierte /platos en platos.php por su cuenta
+# y la petición nunca llega a index.php
+Options -MultiViews
+
+# Cualquier ruta que no sea un archivo real se envía a index.php
+FallbackResource /carta/api/index.php
