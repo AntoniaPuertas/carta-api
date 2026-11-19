@@ -77,4 +77,4 @@ if ($recurso === 'platos' && count($partes) === 2 && ctype_digit($id)) {
     };
 }
 // TODO 3: en cualquier otro caso → error 404 "Esa ruta no existe"
-error(405, 'Esa ruta no existe');
+error(404, 'Esa ruta no existe');

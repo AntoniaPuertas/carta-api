@@ -2,5 +2,9 @@
 # y la petición nunca llega a index.php
 Options -MultiViews
 
+# PHP funciona como FastCGI (mod_fcgid): sin esto, Apache no le pasa la cabecera
+# Authorization y $_SERVER['HTTP_AUTHORIZATION'] llega vacía (siempre 401)
+CGIPassAuth On
+
 # Cualquier ruta que no sea un archivo real se envía a index.php
 FallbackResource /carta/api/index.php
